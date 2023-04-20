@@ -69,6 +69,10 @@ app.use("/api/v1/job", jobsRoutes);
 // validation middleware
 app.use(errorMiddleware)
 
+app.get('/', (req, res) => {
+    res.send('<h1>the backend is live</h1>')
+})
+
 app.listen(PORT, () => {
 
     console.log(`server is running in ${DEV_MODE} on port ${PORT}`.rainbow)
